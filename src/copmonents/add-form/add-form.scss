@@ -1,0 +1,35 @@
+.addForm {
+    flex: 30%;
+    background-color: tomato;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addForm .inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.addForm input {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 1px solid rgb(77, 7, 175);
+}
+
+.addForm button {
+    width: 70px;
+    height: 87px;
+    border: none;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-left: 10px;
+    color:black;
+    cursor: pointer;
+}
