@@ -20,6 +20,12 @@ const App: FC = () => {
     console.log(worksList);
   }
 
+  const completeWork = (worksNameToDelete:string):void => {
+    setWorksList(worksList.filter((worksElement) => {
+      return worksElement.worksElementName !== worksNameToDelete
+    }))
+  }
+
   return (
     <div className="App">
       <div className='header'>
@@ -39,15 +45,12 @@ const App: FC = () => {
     </div>
       <div className='worksList'>
         <div className="worksElement">
-            {/* <input type="checkbox"></input>
-            <span>Hello world!</span>
-            <button>Delete</button> */}
             {worksList.map((worksElement: IWorksList, key: number) => {
-              return <ToDoWorksList key={key} worksElement={worksElement}/>;
+              return <ToDoWorksList 
+                key={key} 
+                worksElement={worksElement} 
+                completeWork={completeWork}/>;
             })}
-          <div className="worksList">
-            
-          </div>
         </div>
       </div>
     </div>
