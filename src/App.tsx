@@ -39,18 +39,19 @@ const App: FC = () => {
                   name="work"
                   value={worksElement} 
                   onChange={handleChange}/>
-            <button onClick={addWorksListElement}>add</button>
+            <button onClick={addWorksListElement}>ADD</button>
         </div>
       </div>
     </div>
       <div className='worksList'>
         <div className="worksElement">
-            {worksList.map((worksElement: IWorksList, key: number) => {
+          <span> {worksList.map((worksElement: IWorksList, key: number) => {
               return <ToDoWorksList 
                 key={key} 
                 worksElement={worksElement} 
                 completeWork={completeWork}/>;
             })}
+          </span> 
         </div>
       </div>
     </div>

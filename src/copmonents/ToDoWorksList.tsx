@@ -14,7 +14,7 @@ const ToDoWorksList = ({worksElement, completeWork}: Props) => {
             </div>
             <button 
                 onClick={() => { completeWork(worksElement.worksElementName)}}>
-                Delete
+                DELETE
             </button>
         </div>
     )
