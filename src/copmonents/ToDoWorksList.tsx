@@ -1,19 +1,14 @@
-import React from "react";
-import { IWorksList } from "../Interfaces";
-interface Props {
-    worksElement: IWorksList;
-    completeWork(worksNameToDelete: string): void;
-}
+import { Props } from "../Interfaces";
 
-const ToDoWorksList = ({worksElement, completeWork}: Props) => {
+const ToDoWorksList = ({ worksElement, deleteWork }: Props) => {
     return (
         <div className="worksElement">
-            <input type="checkbox"/>
+            <input type="checkbox" />
             <div className="content">
                 <span>{worksElement.worksElementName}</span>
             </div>
-            <button 
-                onClick={() => { completeWork(worksElement.worksElementName)}}>
+            <button
+                onClick={() => { deleteWork(worksElement.worksElementName) }}>
                 DELETE
             </button>
         </div>
